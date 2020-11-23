@@ -1,3 +1,0 @@
-include ':demo'
-rootProject.name = "XS Android Scaffold"
-include ':scaffold'
