@@ -1,0 +1,49 @@
+plugins {
+    id "kotlin-kapt"
+}
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 20
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner TestDepend.runner
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation Kt.stdlibJdk7
+    implementation AndroidX.coreKtx
+    implementation AndroidX.appcompat
+    implementation AndroidX.constraintLayout
+
+    implementation Retrofit.runtime
+    implementation Retrofit.scalars
+    implementation Retrofit.moshi
+    implementation Retrofit.moshiKts
+    implementation Retrofit.mock
+    implementation Retrofit.gson
+    kapt Retrofit.moshiKapt
+
+    testImplementation TestDepend.junit
+    androidTestImplementation TestDepend.ext
+    androidTestImplementation TestDepend.espresso
+}

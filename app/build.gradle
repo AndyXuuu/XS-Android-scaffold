@@ -1,0 +1,40 @@
+android {
+    compileSdkVersion BuildConfig.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.andyxuuu.android.demo"
+        minSdkVersion BuildConfig.minSdkVersion
+        targetSdkVersion BuildConfig.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner TestDepend.runner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation Kt.stdlibJdk7
+    implementation AndroidX.coreKtx
+    implementation AndroidX.appcompat
+    implementation AndroidX.constraintLayout
+    implementation GoogleDepend.material
+
+    testImplementation TestDepend.junit
+    androidTestImplementation TestDepend.ext
+    androidTestImplementation TestDepend.espresso
+}

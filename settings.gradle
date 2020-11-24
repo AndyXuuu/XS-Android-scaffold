@@ -1,0 +1,4 @@
+include ':scaffold'
+include ':app'
+rootProject.name = "XSAndroidScaffold"
+includeBuild("versionPlugin")
