@@ -10,18 +10,23 @@ object Versions {
     val recyclerview = "1.0.0"
     val fragment = "1.2.1"
     val material = "1.2.1"
+    val lifecycleVersion = "2.2.0"
 }
 
 object AndroidX {
     val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     val constraintLayout =
-            "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
     val pagingRuntime = "androidx.paging:paging-runtime:${Versions.paging}"
     val workRuntime = "androidx.work:work-runtime:${Versions.work}"
     val workTesting = "androidx.work:work-testing:${Versions.work}"
     val cardView = "androidx.cardview:cardview:${Versions.cardview}"
     val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
+    val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+    val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}"
+    val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleVersion}"
+    val lifecycleExt = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
 }
 
 object GoogleDepend {

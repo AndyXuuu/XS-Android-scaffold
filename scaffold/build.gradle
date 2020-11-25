@@ -27,6 +27,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -34,14 +38,22 @@ dependencies {
     implementation AndroidX.coreKtx
     implementation AndroidX.appcompat
     implementation AndroidX.constraintLayout
+    implementation AndroidX.coroutines
+    implementation AndroidX.liveDataKtx
+    implementation AndroidX.viewModelKtx
+    implementation AndroidX.lifecycleExt
 
-    implementation Retrofit.runtime
-    implementation Retrofit.scalars
-    implementation Retrofit.moshi
-    implementation Retrofit.moshiKts
-    implementation Retrofit.mock
-    implementation Retrofit.gson
-    kapt Retrofit.moshiKapt
+    implementation Fragment.runtimeKtx
+
+    implementation RetrofitDepend.runtime
+    implementation RetrofitDepend.scalars
+    implementation RetrofitDepend.moshi
+    implementation RetrofitDepend.moshiKts
+    implementation RetrofitDepend.mock
+    implementation RetrofitDepend.gson
+    kapt RetrofitDepend.moshiKapt
+
+    implementation ThirdDepend.localeHelper
 
     testImplementation TestDepend.junit
     androidTestImplementation TestDepend.ext

@@ -1,10 +1,10 @@
 object ThirdVersions {
     val retrofit = "2.9.0"
-    val moshi="1.11.0"
+    val moshi = "1.11.0"
     val timber = "4.7.1"
 }
 
-object Retrofit {
+object RetrofitDepend {
     val runtime = "com.squareup.retrofit2:retrofit:${ThirdVersions.retrofit}"
     val gson = "com.squareup.retrofit2:converter-gson:${ThirdVersions.retrofit}"
     val mock = "com.squareup.retrofit2:retrofit-mock:${ThirdVersions.retrofit}"
@@ -14,6 +14,7 @@ object Retrofit {
     val moshiKapt = "com.squareup.moshi:moshi-kotlin-codegen:${ThirdVersions.moshi}"
 }
 
-object Depend {
+object ThirdDepend {
     val timber = "com.jakewharton.timber:timber:${ThirdVersions.timber}"
+    val localeHelper = "com.zeugmasolutions.localehelper:locale-helper-android:1.1.2"
 }
